@@ -18,7 +18,7 @@ export const BasicTable = () => {
     };
   
     fetchData();
-    })
+    }, [])
 
     return (
       <Table aria-label="Shipments tracking table" selectionMode="single">
@@ -32,7 +32,8 @@ export const BasicTable = () => {
         </Table.Header>
         <Table.Body>
           {shipments.map((shipment: Shipment) => (
-            <Table.Row key={shipment.id}>
+            <Table.Row key={shipment._id}>
+              <Table.Cell>{shipment._id}</Table.Cell>
               <Table.Cell>{shipment.customerId}</Table.Cell>
               <Table.Cell>{shipment.createdDate.toString()}</Table.Cell>
               <Table.Cell>{shipment.carrier}</Table.Cell>

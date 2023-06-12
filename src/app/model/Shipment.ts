@@ -1,13 +1,13 @@
 export class Shipment {
-    id: string;
+    _id: string;
     customerId: string;
     createdDate: Date;
     carrier: string;
     location: string;
     status: string;
   
-    constructor(id: string, customerId: string, createdDate: Date, carrier: string, location: string, status: string) {
-      this.id = id;
+    constructor(_id: string, customerId: string, createdDate: Date, carrier: string, location: string, status: string) {
+      this._id = _id;
       this.customerId = customerId;
       this.createdDate = createdDate;
       this.carrier = carrier;
